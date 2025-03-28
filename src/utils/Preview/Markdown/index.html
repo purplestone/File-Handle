@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Preview</title>
+    <base id="baseUrl" href="/fh/" />
+    <script>
+      console.log('markdown page start');
+    </script>
+    <script src="/static/lib/marked-15.0.7.min.js"></script>
+    <base id="baseUrl" />
+    <link rel="stylesheet" href="/static/lib/highlight.js/github.min.css">
+    <link rel="stylesheet" href="/static/lib/highlight.js/default.min.css">
+    <script src="/static/lib/highlight.js/highlight.min.js"></script>
+    <script src="/static/lib/highlight.js/go.min.js"></script>
+    <link rel="stylesheet" href="/src/utils/Preview/Markdown/style.css">
+</head>
+<body>
+    <div id="preview" class="markdown-preview">Loading</div>
+    <script type="module" src="/src/utils/Preview/Markdown/main.ts"></script>
+</body>
+</html>

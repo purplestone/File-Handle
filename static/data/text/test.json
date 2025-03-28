@@ -1,0 +1,9 @@
+{
+    "version": "0.31.0",
+    "architecture": {
+        "64bit": {
+            "url": "URL_ADDRESScom/BurntSushi/ripgrep",
+            "hash": "URL_HASH"
+        }
+    }
+}
