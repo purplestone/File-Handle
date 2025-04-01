@@ -12,7 +12,7 @@ export interface FileInfo {
   isDirectory: boolean;
   size?: number;
   modifiedTime: string;
-  extension?: string;
+  extension?: string | null;
   mimeType?: string | boolean;
   isPreviewable?: boolean|null|string[];
   isEditorViewable?: boolean|null|string[];
@@ -89,7 +89,7 @@ export const editAbleExtensions:any[] = [];
 });
 
 
-function extname(path: string) {
+export function extname(path: string) {
   // 去除路径末尾的斜杠
   path = path.replace(/[\\\/]+$/, '');
   const parts = path.split('/');
