@@ -75,11 +75,11 @@ import type { FileInfo } from "@/types/index";
 function renderPreview(content:string, info:FileInfo) {
   if (typeof content === 'string') {
       const code = document.querySelector('code');
-      function escapeHtml(text:string) {
-          const div = document.createElement('div');
-          div.textContent = text;
-          return div.innerHTML;
-      }
+      // function escapeHtml(text:string) {
+      //     const div = document.createElement('div');
+      //     div.textContent = text;
+      //     return div.innerHTML;
+      // }
       if (code) {
         // code.innerHTML = lines.map((line,i) => 
         //     `<p><span class="line-number">${i+1}</span>${hljs.highlightAuto(escapeHtml(line || '')).value}</p>`
@@ -102,9 +102,9 @@ function renderPreview(content:string, info:FileInfo) {
           }
         })
         || (lang = getLanguageByExtension(info.name))) {
-          oontentHtml = hljs.highlight(escapeHtml(content || ''), {language: lang}).value;
+          oontentHtml = hljs.highlight((content || ''), {language: lang}).value;
         }else {
-          oontentHtml = hljs.highlightAuto(escapeHtml(content || '')).value;
+          oontentHtml = hljs.highlightAuto((content || '')).value;
         }
         const lines = oontentHtml.split('\n');
         oontentHtml = lines.map((line,i) => 
